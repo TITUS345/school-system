@@ -46,6 +46,12 @@ export default function Sidebar({ closeSidebar }: { closeSidebar: () => void }) 
                     <DropdownMenuContent>
                         <DropdownMenuLabel>My Account</DropdownMenuLabel>
                         <DropdownMenuSeparator />
+                        <DropdownMenuItem
+                            asChild
+                            className="text-gray-900 dark:text-gray-100 hover:text-gray-300 dark:hover:text-gray-100 hover:bg-gray-500"
+                        >
+                            <Link href="/auth/logIn">Log In</Link>
+                        </DropdownMenuItem>
 
                         <DropdownMenuItem
                             asChild
