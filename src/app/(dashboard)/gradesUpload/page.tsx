@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { Suspense, useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Loader } from "@/components/ui/loader";
 import { Alert } from "@/components/ui/alert";
@@ -195,4 +195,10 @@ const GradesUpload = () => {
     );
 };
 
-export default GradesUpload;
+const GradesUploadPage = () => (
+    <Suspense fallback={<Loader text="Loading grades upload page..." />}>
+        <GradesUpload />
+    </Suspense>
+);
+
+export default GradesUploadPage;
