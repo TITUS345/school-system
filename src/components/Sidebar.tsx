@@ -13,6 +13,7 @@ import DashboardDropdown from "./Dashboard";
 import { SwitchTheme } from "./Switch";
 import { Button } from "./ui/button";
 import { FiX } from "react-icons/fi"; // About icon (info icon)
+import AuthButton from "./LogInLogOut";
 
 export default function Sidebar({ closeSidebar }: { closeSidebar: () => void }) {
     return (
@@ -52,6 +53,14 @@ export default function Sidebar({ closeSidebar }: { closeSidebar: () => void }) 
                         >
                             <Link href="/auth/logIn">Log In</Link>
                         </DropdownMenuItem>
+
+                        <DropdownMenuItem
+                            asChild
+                            className="text-gray-900 dark:text-gray-100 hover:text-gray-300 dark:hover:text-gray-100 hover:bg-gray-500"
+                        >
+                            <AuthButton />
+                        </DropdownMenuItem>
+
 
                         <DropdownMenuItem
                             asChild
